@@ -54,6 +54,29 @@ class LoopDeLoop {
     }
     return stars;
   }
+
+  createMultiplicationTable(rows, columns) {
+    let table = "";
+
+    for (let row = 1; row <= rows; row++) {
+      for (let column = 1; column <= columns; column++) {
+        if (column == 1) {
+          table += "|";
+        }
+        let number = row * column;
+        if (column > 1 && number < 10) {
+          table += `  ${number} |`;
+        } else {
+          table += ` ${number} |`;
+        }
+      }
+      if (row < rows) {
+        table += "\n";
+      }
+    }
+
+    return table;
+  }
 }
 
 module.exports = LoopDeLoop;

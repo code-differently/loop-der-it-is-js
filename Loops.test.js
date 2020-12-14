@@ -66,3 +66,41 @@ test("Test that a triangle was made", () => {
   // Then
   expect(actual).toEqual(expected);
 })
+
+test("Test for a 4x4 triangle", () => {
+  // Given
+  const loops = new Loops();
+
+  // When
+  const expected =
+    `| 1 |  2 |  3 |  4 |
+| 2 |  4 |  6 |  8 |
+| 3 |  6 |  9 | 12 |
+| 4 |  8 | 12 | 16 |`;
+  const actual = loops.createMultiplicationTable(4, 4);
+  // When
+
+
+  // Then
+  expect(actual).toEqual(expected);
+})
+
+test("Test for a 6x6 triangle", () => {
+  // Given
+  const loops = new Loops();
+
+  // When
+  const expected =
+    `| 1 |  2 |  3 |  4 |  5 |  6 |
+| 2 |  4 |  6 |  8 | 10 | 12 |
+| 3 |  6 |  9 | 12 | 15 | 18 |
+| 4 |  8 | 12 | 16 | 20 | 24 |
+| 5 | 10 | 15 | 20 | 25 | 30 |
+| 6 | 12 | 18 | 24 | 30 | 36 |`;
+  const actual = loops.createMultiplicationTable(6, 6);
+  // When
+
+
+  // Then
+  expect(actual).toEqual(expected);
+})
