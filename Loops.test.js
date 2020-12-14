@@ -41,3 +41,28 @@ test("Test for sum of numbers from n to m", () => {
   // Then
   expect(actual).toEqual(expected);
 })
+
+// Can't test this because prompt() doesn't work with jest.
+// test("Test are we there yet", () => {
+//   // Given
+//   const loops = new Loops();
+//   const expected = "Good!";
+
+//   // When
+//   const actual = loops.areWeThereYet();
+
+//   // Then
+//   expect(actual).toEqual(expected);
+// })
+
+test("Test that a triangle was made", () => {
+  // Given
+  const loops = new Loops();
+
+  // When
+  const expected = "*\n**\n***\n****\n*****\n"
+  const actual = loops.makeTriangle(5);
+
+  // Then
+  expect(actual).toEqual(expected);
+})

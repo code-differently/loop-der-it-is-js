@@ -30,6 +30,30 @@ class LoopDeLoop {
     }
     return sum;
   }
+
+  areWeThereYet() {
+    const computerResponse = "Good!";
+    const areThere = false;
+    while (areThere == false) {
+      if (prompt("Are we there yet?").toLowerCase() == "yes") {
+        areThere = true;
+        alert(computerResponse);
+      }
+    }
+    return computerResponse;
+  }
+
+  makeTriangle(columns) {
+    let stars = "";
+    for (let i = 1; i <= columns; i++) {
+      let numOfStars = i;
+      for (let i = 1; i <= numOfStars; i++) {
+        stars += "*";
+      }
+      stars += "\n";
+    }
+    return stars;
+  }
 }
 
 module.exports = LoopDeLoop;
