@@ -49,16 +49,38 @@ test("test for the sum", () => {
 
 })
 
-test("test for triangle", () => {
-         //Given
-         let loops = new Loops();
-         let expected = "1\n1 2\n1 2 3\n1 2 3 4\n1 2 3 4 5\n";
-
-         //When 
-         let actual = loops.triangle();
-
-         //Then
-         expect(actual).toEqual(expected);
+test("test for triangle",() => {
+        //given
+        let loops = new Loops();
+        let expected = "*\n**\n***\n****\n*****\n";
+        //when
+        let actual = loops.triangle();
+        //Then
+        expect(actual).toEqual(expected);
 })
 
+test("test small multiplication table", () => {
+        //Given 
+        let loops = new Loops();
+        let expected = "|1|2|3|4|\n|2|4|6|8|\n|3|6|9|12|\n|4|8|12|16|\n"
 
+        //When
+        let actual = loops.makeSmallMultiplicationTable();
+
+        //Then
+        expect(actual).toEqual(expected);
+
+})
+
+test("test medium multiplication table", () => {
+        //Given 
+        let loops = new Loops();
+        let expected = "|1|2|3|4|5|6|\n|2|4|6|8|10|12|\n|3|6|9|12|15|18|\n|4|8|12|16|20|24|\n|5|10|15|20|25|30|\n|6|12|18|24|30|36|\n"
+
+        //When
+        let actual = loops.makeMediumMultiplicationTable();
+
+        //Then
+        expect(actual).toEqual(expected);
+
+})
