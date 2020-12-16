@@ -43,8 +43,8 @@ class LoopDeLoop {
     }*/
     
     triangle() {
-        let line, triangle;
-        line = triangle = "";
+        let line = ""; 
+        let triangle = "";
         
         for (let row = 1; row <= 5; row++) {
         line = "";
